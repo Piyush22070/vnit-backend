@@ -24,7 +24,7 @@ const blogs = [
         "image": "blob:http://localhost:3000/f0f79db3-eb80-43e0-b8d8-b46f55cb1168",
         "ownerImage": "/images/default.png",
         "votes": {
-            "upvotes": 1,
+            "upvotes": 2,
             "downvotes": 0
         },
         "comments": [],
@@ -40,7 +40,7 @@ const blogs = [
         "image": "blob:http://localhost:3000/daad974c-d16b-4172-8b29-409d133e51a8",
         "ownerImage": "/images/default.png",
         "votes": {
-            "upvotes": 1,
+            "upvotes": 2,
             "downvotes": 0
         },
         "comments": [],

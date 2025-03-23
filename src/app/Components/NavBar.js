@@ -36,7 +36,7 @@ const Navbar = () => {
           <Link href="/">
             <Image
               className="h-[50px] w-[50px]"
-              src="/images/rem-removebg-preview.png"
+              src="/images/logo.png"
               alt="Logo"
               width={50}
               height={50}

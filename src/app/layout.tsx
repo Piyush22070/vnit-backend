@@ -1,7 +1,8 @@
 import '@/app/global.css'
+import NavBar from './Components/NavBar'
 export const metadata = {
-  title: "Ycce - DashBoard",
-  description: "Ycce Construction Site Managment Tool",
+  title: "Blog Karo ",
+  description: "Blog Karo ",
 };
 
 // Define the type for the props
@@ -14,6 +15,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en">
       <link rel="icon" href="/images/logo.png" type="/images/png" sizes="32x32" />
       <body>
+        <NavBar/>
         {children}
       </body>
     </html>

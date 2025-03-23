@@ -13,7 +13,7 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <link rel="icon" href="/images/logo.png" type="/images/png" sizes="32x32" />
+       <link rel="icon" href="/images/logo.png" sizes="32x32" />
       <body>
         <NavBar/>
         {children}

@@ -1,16 +1,16 @@
+"use client";
 import React, { useState } from "react";
-import { Link } from "react-router";
+import Link from "next/link"; // ✅ Correct Link import for Next.js
+import { useRouter } from "next/navigation"; // ✅ Correct router import for Next.js
 import { FaGoogle, FaLinkedin, FaGithub } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useNavigate } from "react-router";
 
 const Login = () => {
-  const navigate = useNavigate();
+  const router = useRouter(); // ✅ Use useRouter instead of useNavigate
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
-  const [error, setError] = useState(null);
 
   // Email validation function
   const validateEmail = (email) => {
@@ -20,7 +20,6 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setError(null);
 
     if (!email || !password || !name) {
       toast.error("Please fill all the fields");
@@ -33,13 +32,14 @@ const Login = () => {
     }
 
     localStorage.setItem("user", JSON.stringify({ name, email }));
+    toast.success("Login successful");
+
     setTimeout(() => {
-      navigate("/");
+      router.push("/"); // ✅ Correct navigation in Next.js
       setName("");
       setEmail("");
       setPassword("");
     }, 1500);
-    toast.success("Login successful");
   };
 
   return (
@@ -82,7 +82,6 @@ const Login = () => {
             />
           </div>
           <ToastContainer />
-          <p className="text-xs text-red-600">{error}</p>
           <div>
             <button
               type="submit"
@@ -93,7 +92,7 @@ const Login = () => {
           </div>
           <p className="text-xs mt-3">
             Don't have an account?{" "}
-            <Link to="/signup" className="text-blue-500 hover:underline">
+            <Link href="/signup" className="text-blue-500 hover:underline">
               Sign Up
             </Link>
           </p>

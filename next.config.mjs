@@ -1,6 +1,6 @@
 const nextConfig = {
     images: {
-      domains: ['lh3.googleusercontent.com'], // Add the external domain here
+      domains: ['lh3.googleusercontent.com',"i.pinimg.com"], // Add the external domain here
     },
   };
   
